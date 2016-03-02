@@ -1,5 +1,9 @@
 <?php
+    require('function.php');
+    // include();
     // DBに接続
+
+    special_echo('ほげ');
     define('PDO_DSN', 'mysql:dbname=phpkiso3;host=localhost');
     define('DB_USERNAME', 'root');
     define('DB_PASSWORD', '');
@@ -25,13 +29,15 @@
         $sql = 'SELECT * FROM contact WHERE id=' . $id;
 
         // sprintf()関数
-        $sql = sprintf('SELECT * FROM contact WHERE id=%d',
-              $id
-          );
+        $sql = sprintf('SELECT * FROM contact WHERE id=%d',$id);
 
         $sample_str = sprintf('ほげ%sふが%sほが%s','hoge','fuga','hoga');
                               //   A    B    C  // a       b     c
         echo $sample_str;
+        $sample_str2 = sprintf('私は%sのテストで%d点でした。','2週目', 100);
+        echo '<br>';
+        echo $sample_str2;
+
         // 2.文をprepareする
         $stmt = $dbh->prepare($sql);
 
