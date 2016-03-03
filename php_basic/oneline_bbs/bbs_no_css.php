@@ -5,8 +5,11 @@
   if(isset($_POST) && !empty($_POST)){
 
     //データベースに接続
+    // DB名が違う
 
     //SQL文作成(INSERT文)
+    // $_POST['nickname']と$_POST['comment']
+    // カラム名が違う
 
     //INSERT文実行
 
@@ -30,11 +33,10 @@
       <button type="submit" >つぶやく</button>
     </form>
 
+    <!-- while文開始 -->
     <h2><a href="#">nickname Eriko</a> <span>2015-12-02 10:10:20</span></h2>
     <p>つぶやきコメント</p>
-
-    <h2><a href="#">nickname Eriko</a> <span>2015-12-02 10:10:10</span></h2>
-    <p>つぶやきコメント2</p>
+    <!-- while文終了 -->
 </body>
 </html>
 

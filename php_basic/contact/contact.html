@@ -6,22 +6,36 @@
 </head>
 <body>
   <h1>お問い合わせ情報入力</h1>
-  <form>
+  <form method="post" action="check.php">
     <div>
       <label>お名前</label>
-      <input>
+      <input type="text" name="nickname">
     </div>
     <div>
       <label>メールアドレス</label>
-      <input>
+      <input type="email" name="email">
     </div>
     <div>
       <label>お問い合わせ内容</label>
-      <input>
+      <!-- <input type="text" name="content"> -->
+      <textarea name="content" cols="40" rows="5"></textarea>
     </div>
     <div>
-      <input><!-- 送信ボタン -->
+      <input type="submit" value="入力内容確認"><!-- 送信ボタン -->
+      <!-- <button type="submit" class="btn btn-info">入力内容確認</button> -->
     </div>
   </form>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
